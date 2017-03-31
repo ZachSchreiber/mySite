@@ -1,0 +1,220 @@
+#playSection{
+  .mainBtn {
+    background: #8164BA;
+    border: none;
+    box-shadow: 0 6px #40325d;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    margin: 5px;
+    font-size: 30px;
+    font-family: 'Monofett', cursive;
+    padding: 5px 10px;
+
+    &:hover {
+        background: #5a4682;
+
+        &:active {
+            background: #5a4682;
+            box-shadow: 0 3px #40325d;
+            transform: translateY(4px);
+        }
+    }
+}
+
+#appendBtn {
+  background: #D27349;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  margin: 5px;
+  font-size: 20px;
+  font-family: 'Josefin Sans', serif;
+  padding: 5px 10px;
+
+  &:hover {
+      background: #a85c3a;
+
+  }
+
+}
+
+.gameButtons {
+    margin-top: 20px;
+}
+
+.userInput {
+display: inline;
+background: none;
+font-size: 25px;
+
+font-family: 'Josefin Sans', serif;
+border: 0;
+border-radius: 2px;
+outline: none;
+text-shadow: none;
+text-align: left;
+min-height: 100px;
+width: 100%;
+margin-top: 10px;
+&:focus {
+  background-color: #fff;
+
+}
+}
+
+textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+color: #585a66;
+}
+textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color: #585a66;
+
+}
+textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: #585a66;
+}
+textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: #585a66;
+}
+textarea:placeholder-shown { /* Standard Pseudo-class */
+color: #585a66;
+}
+
+}
+
+.fadeContainer {
+  background-color: rgba(255,255,255, .3);
+  width: 85%;
+  margin: 0 auto;
+  top: 50px;
+  padding: 25px;
+  position: relative;
+
+
+
+
+#gamePage {
+  text-shadow: 0 0 12px(#000000);
+  color: transparent;
+  border-radius: 5px;
+  font-size: 1.8em;
+  line-height: 120%;
+
+  .active {
+      color: #000000;
+      text-shadow: none;
+  }
+}
+
+
+#title {
+    font-family: 'Monofett', cursive;
+    color: #fff;
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+
+#hello {
+  font-size: 20px;
+  font-family: 'Josefin Sans', serif;
+}
+
+input {
+  display: inline;
+  background-color: none;
+  background: none;
+  font-size: 25px;
+  font-family: 'Josefin Sans', serif;
+  border: 0;
+  border-bottom: 2px solid #40325d;
+  border-radius: 2px;
+  color: #8164BA;
+  padding: 6px 5px 0 5px;
+  outline: none;
+  text-align: center;
+
+  &:focus {
+      background-color: #fff;
+  }
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+color: #585a66 !important;
+}
+input::-moz-placeholder { /* Firefox 19+ */
+color:  #585a66 !important;
+}
+input:-ms-input-placeholder { /* IE 10+ */
+color:  #585a66 !important;
+}
+input:-moz-placeholder { /* Firefox 18- */
+color:  #585a66 !important;
+}
+
+}
+
+
+
+.savedContainer {
+  margin-top: 15px;
+.savedSpiels {
+  display: flex;
+  align-items: center;
+  li:first-child {
+    font-size: 25px;
+    color: #585a66;
+    font-family: 'Josefin Sans', serif;
+
+  }
+  li {
+  float: left;
+}
+}
+}
+
+.headerLogo {
+  width:50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+}
+
+.headerBtn {
+  width: 50%;
+  vertical-align: center;
+  display: flex;
+  justify-content: flex-end;
+  li {
+    float: left;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .headerLogo {
+    width: 100%;
+  }
+  .headerBtn {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 720px) {
+   .fadeContainer {
+     width: 85%;
+     padding: 20px 10px;
+
+     #gamePage {
+       font-size: 1.2em;
+     }
+
+     input {
+       font-size: 16px;
+     }
+   }
+
+}

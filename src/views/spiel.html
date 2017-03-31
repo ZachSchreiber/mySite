@@ -1,0 +1,65 @@
+
+    <section id="playSection">
+        <video preload="metadata" autoplay poster muted loop>
+      <source src="images/video.mp4" type="video/mp4">
+      </video>
+        <header id="playHeader">
+          <div class="headerLogo">
+            <img class='logo' src='images/spiellogo.png' />
+            <h1 ng-click="fart()">Spiel</h1>
+          </div>
+            <ul class="headerBtn">
+              <li>
+            <button ng-click="goHome()" class="mainBtn home">Home</button>
+          </li>
+          <li>
+            <button ng-click="clearStorage()" class="mainBtn">Clear Saved</button>
+          </li>
+        </ul>
+        </header>
+        <div ng-show="view === 'intro'" id="playIntro">
+            <div class="fadeContainer">
+                <p id="title">Spiel</p>
+                <p id="hello"> \ˈspēl\ (Verb): To Speak extravagantly. <br> German (noun): A game. <br><br> Click the "Play" button bellow, fill out the form, click "Show!" to get the spiel. Or create your Own!
+                </p>
+                <div class="gameButtons">
+                <button class="mainBtn"  ng-click="getSpiels()" ng-model="clicked" >Play</button>
+                 <div ng-show="areThereSpiels" class="savedContainer"><ul class="savedSpiels"><li>Saved Spiels:</li><li ng-repeat="spiel in localSpiels"><button ng-click="displaySpiel($index)"  id="{{$index}}"   class="mainBtn localSpiel">{{spiel.name}}</button></li></ul></div>
+              </div>
+            </div>
+        </div>
+        <div class="fadeContainer" ng-show="view === 'localView'">
+            <div id='gamePage'>
+                <form ng-class="{'active': isActive}" name="spielForm" novalidat ng-bind-html="getHtml(form)">
+                    <p ng-bind-html="getHtml(form)"></p>
+                  </form>
+            </div>
+            <div class="gameButtons">
+    <button class="mainBtn" id="showBtn" ng-click="activeForm()">Show!</button>
+    <button class="mainBtn"   ng-click="getSpiels()" ng-model="clicked" >Zach's Spiels</button>
+    <button class="mainBtn" ng-click="updateView('createView')">Create your Own</button>
+  </div>
+        </div>
+        <div ng-show="view === 'createView'">
+          <div class="fadeContainer">
+            <button id="appendBtn" ng-click="appendInput('makeNoun')">!Noun</button>
+            <button id="appendBtn" ng-click="appendInput('makeVerb')">!Verb</button>
+            <button id="appendBtn" ng-click="appendInput('makeAdj')">!Adjective</button>
+            <button id="appendBtn" ng-click="appendInput('makePlural')">!Plural-Noun</button>
+            <button id="appendBtn" ng-click="appendInput('makeNumber')">!Number</button>
+            <button id="appendBtn" ng-click="appendInput('makeName')">!Name</button>
+            <button id="appendBtn" ng-click="appendInput('makeExclam')">!Exclamation</button>
+            <button id="appendBtn" ng-click="appendInput('makePart')">!Body Part</button>
+            <form novalidate name=UserForm>
+                <textarea required  class="userInput" ng-model="userLib" placeholder="Start typing here. To add an input, click one of the buttons above, or type your desired word class exactly as shown (ex: !Noun). Name your Spiel, and click save. Your saved Spiels can be accessed from the main page."></textarea>
+                <input type="text" ng-model="spielName" placeholder="Speil Name" required>
+                <button class="mainBtn" ng-disabled="UserForm.$invalid" ng-click="create()">Save</button>
+              </div>
+            </form>
+        </div>
+         <div ng-show="play.view === 'userView'">
+            <form id="gameForm" ng-class="{'active': isActive}" name="spielForm" ng-bind-html="getHtml(body)">
+                <p ng-bind-html="getHtml(body)"></p>
+              </form>
+        </div>
+     </section>

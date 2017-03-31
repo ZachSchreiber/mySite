@@ -1,0 +1,124 @@
+#contactContainer {
+  width: 80%;
+  height: 90%;
+  margin: auto;
+  padding: 20px;
+
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #626572;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+  }
+
+  #email-container, #body-Container {
+    position: relative;
+    width: 100%;
+  }
+
+  form {
+
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+  }
+
+
+  input, textarea {
+    margin-bottom: 30px;
+    font-size: 20px;
+    outline: none;
+    width: 100%;
+    border: none;
+
+  }
+
+  input {
+    padding: 5px 0;
+
+  }
+
+  #email-label, #body-label {
+    width: 130px;
+    position: absolute;
+    top: 9%;
+    margin: 0 5px;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    color: #91939c;
+    transition: all .9s ease;
+
+    &.active {
+      margin-left: 75%;
+      color: #dfe0e2;
+    }
+  }
+
+  #body-label {
+    top: 2%;
+  }
+
+  textarea {
+    height: 225px;
+  }
+
+  button {
+
+    margin: auto;
+    background-color: transparent;
+    border: none;
+    color: #626572;
+    padding: 20px 0;
+    width: 40%;
+    font-size: 35px;
+    position: relative;
+    transition: .1s ease-in-out;
+
+    &:hover {
+      //border: 4px solid #fff;
+      color: #fff;
+
+        &::after {
+          border: 4px solid #fff;
+          color: #fff;
+        }
+    }
+
+    &::after {
+      top: 0;
+      left: 0;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: 4px dashed #626572;
+      border-radius: 4px;
+      transition: .4s ease-in-out;
+
+    }
+  }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+#contactContainer {
+  width: 100%;
+  padding: 0;
+
+  form {
+    padding: 20px 0 0 0;
+  }
+
+  #email-label, #body-label {
+    &.active {
+      margin-left: 55%;
+    }
+  }
+}
+
+}

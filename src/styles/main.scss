@@ -1,0 +1,223 @@
+/****** Vendor Imports ******/
+@import 'partials/vendor/bourbon/bourbon';
+/********** Setup ***********/
+@import 'partials/setup/variables';
+@import 'partials/setup/reset';
+@import 'partials/setup/fonts';
+@import 'partials/about';
+@import 'partials/work';
+@import 'partials/play';
+@import 'partials/contact';
+/***** Site Components ******/
+
+
+body {
+    background: linear-gradient( rgba(242, 241, 236, 0.80), rgba(242, 241, 236, 0.80) ), url("/images/wood2.jpg") repeat;
+    min-height: 100%;
+}
+
+#mainHead {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    section {
+        width: 600px;
+        font-size: 20px;
+        color: #626572;
+        font-family: 'Lato', sans-serif;
+        padding-top: 15px;
+
+        ul {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin-bottom: 10px;
+            position: relative;
+
+
+            li {
+                text-align: center;
+                width: 25%;
+                padding-bottom: 12px;
+                cursor: pointer;
+                transition: 0.4s ease;
+
+                &:hover {
+                  color: #009eb3;
+                }
+
+                &.active {
+                    color: #009eb3;
+                }
+
+                &:last-child {
+                  top: 100%;
+                  left: 0%;
+                  position: absolute;
+                  padding-bottom: 0;
+                  border-right: none;
+                  width: 25%;
+                  height: 3px;
+                  background-color: #009eb3;
+                  -webkit-transition: .5s ease-out;
+                  transition: .5s ease-out;
+
+                }
+            }
+        }
+    }
+}
+//
+// progress {
+//     //
+//     //   /* Dimensions */
+//     width: 100%;
+//     height: 4px; //
+//     /* Reset the apperance */
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     appearance: none;
+//     /* Get rid of the default border in Firefox/Opera. */
+//     border: none;
+//     /* For Firefox/IE10+ */
+//     background-color: transparent;
+//     /* For IE10+, color of the progress bar */
+//     color: transparent;
+// }
+//
+// progress::-webkit-progress-bar {
+//     background-color: transparent;
+// }
+//
+// -webkit-progress-value {
+//     background-color: #009eb3;
+// }
+//
+// -moz-progress-bar {
+//     background-color: transparent;
+// }
+//
+// progress[value]::-webkit-progress-value {
+//     background-color: #009eb3;
+// }
+
+
+#pageContainer {
+
+    margin: 82px auto 10px auto;
+    width: 85%;
+
+}
+
+#aboutSection,
+#contactSection,
+#playSection,
+#projectsSection {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 20px;
+
+  }
+
+  #projectsSection {
+    background-color: transparent;
+
+  }
+
+  #aboutSection {
+    overflow-x: hidden;
+    background: linear-gradient( rgba(242, 241, 236, 0.40), rgba(242, 241, 236, 0.40) );
+  }
+
+  #playSection {
+  padding:0;
+  background: linear-gradient( rgba(242, 241, 236, 0.40), rgba(242, 241, 236, 0.40) );
+  position: relative;
+  overflow: hidden;
+  min-height: 570px;
+
+
+
+  video {
+    width: auto;
+    z-index: -1;
+    overflow: hidden;
+    opacity: .8;
+    position: absolute;
+  }
+
+  #playHeader {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    padding: 0 10px 20px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+  h1 {
+    color: #ffffff;
+    font-size: 100px;
+    font-family: 'Monofett', cursive;
+    text-align: left;
+    padding-top: 5px;
+  }
+
+  .logo {
+    padding-top: 15px;
+    float: left;
+    padding-left: 1%;
+  }
+}
+  }
+
+  #contactSection {
+    background-color: transparent;
+    border: 4px solid #fff;
+
+  }
+
+  @media only screen and (max-width: 1038px) {
+
+    #pageContainer {
+      width: 95%;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+#playSection {
+   .mainBtn {
+     font-size: 24px;
+   }
+ }
+}
+
+
+@media only screen and (max-width: 550px) {
+  #playSection {
+
+      min-height: 700px;
+    #playHeader {
+       h1 {
+         font-size: 75px;
+       }
+     }
+     .logo {
+       height: 90px;
+       width: 90px;
+     }
+   }
+}
