@@ -97,7 +97,7 @@ $scope.donothing = function() {
     || navigator.userAgent.match(/Windows Phone/i)
     ){
 
-        $('video > source').attr("src", "''");
+        $('.videoMobile').remove();
 
     }
 }
