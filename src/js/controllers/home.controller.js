@@ -82,8 +82,13 @@ $scope.labelClass = function(input) {
 }
 
 $scope.donothing = function() {
-  
+
 }
+
+$('#stackLogo #stackContainer section li').on('touchstart',  function() {
+  $('#stackLogo #stackContainer section li').remvoveClass('.active');
+  $this.addClass('.active');
+})
 
 
 });
