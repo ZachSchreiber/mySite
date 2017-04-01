@@ -2,6 +2,11 @@ var app =angular.module('zach-site');
 app.controller('homeCtrl', function($state, $scope) {
   var self = this;
 
+  this.scrollTo = function() {
+    $('body, html, #pageContainer').scrollTop(0);
+    
+  }
+
 //animates navbar border bottom. resets project views
 $scope.moveLi = function(amount) {
   $('#moveMe').css('left', amount + '%')
