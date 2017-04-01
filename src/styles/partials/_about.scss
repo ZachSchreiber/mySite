@@ -140,6 +140,8 @@
     border-top: 1px solid #626572;
     padding: 20px 0;
 
+
+
     #stackContainer {
         width: 100%;
         display: flex;
@@ -151,11 +153,6 @@
             font-size: 1.5em;
             font-weight: bold;
             text-align: center;
-        }
-
-        i {
-            margin-right: 10px;
-            color: #574c75;
         }
 
         section {
@@ -256,25 +253,14 @@
                     width: 0;
                     height: 5px;
                     border-radius: 2px;
+                    transition: 0.7s ease;
                 }
             }
 
             .expert {
                 &:hover, &.active  {
                     &::after {
-                        animation-name: expert;
-                        -webkit-animation-name: expert;
-                        animation-duration: 0.7s;
-                        -webkit-animation-duration: 0.7s;
-                        -webkit-animation-direction: alternate;
-                        /* Safari 4.0 - 8.0 */
-                        animation-direction: alternate;
-                        -webkit-animation-fill-mode: forwards;
-                        /* Safari 4.0 - 8.0 */
-                        animation-fill-mode: forwards;
-                        -webkit-animation-iteration-count: 1;
-                        /* Safari 4.0 - 8.0 */
-                        animation-iteration-count: 1;
+                      width: 90%;
                         background: rgba(255,255,255,1);
                         background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(178,225,232,1) 27%, rgba(153,216,224,1) 54%, rgba(102,196,209,1) 76%, rgba(0,158,179,1) 100%);
                         background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(27%, rgba(178,225,232,1)), color-stop(54%, rgba(153,216,224,1)), color-stop(76%, rgba(102,196,209,1)), color-stop(100%, rgba(0,158,179,1)));
@@ -290,19 +276,7 @@
             .medium {
                 &:hover, &.active  {
                     &::after {
-                        animation-name: med;
-                        -webkit-animation-name: med;
-                        animation-duration: 0.7s;
-                        -webkit-animation-duration: 0.7s;
-                        -webkit-animation-direction: alternate;
-                        /* Safari 4.0 - 8.0 */
-                        animation-direction: alternate;
-                        -webkit-animation-fill-mode: forwards;
-                        /* Safari 4.0 - 8.0 */
-                        animation-fill-mode: forwards;
-                        -webkit-animation-iteration-count: 1;
-                        /* Safari 4.0 - 8.0 */
-                        animation-iteration-count: 1;
+                        width: 70%;
                         background: rgba(255,255,255,1);
                         background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(178,225,232,1) 27%, rgba(153,216,224,1) 54%, rgba(102,196,209,1) 76%, rgba(0,158,179,1) 100%);
                         background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(27%, rgba(178,225,232,1)), color-stop(54%, rgba(153,216,224,1)), color-stop(76%, rgba(102,196,209,1)), color-stop(100%, rgba(0,158,179,1)));
@@ -318,19 +292,7 @@
             .novice {
                 &:hover, &.active {
                     &::after {
-                        animation-name: novice;
-                        -webkit-animation-name: novice;
-                        animation-duration: 0.7s;
-                        -webkit-animation-duration: 0.7s;
-                        -webkit-animation-direction: alternate;
-                        /* Safari 4.0 - 8.0 */
-                        animation-direction: alternate;
-                        -webkit-animation-fill-mode: forwards;
-                        /* Safari 4.0 - 8.0 */
-                        animation-fill-mode: forwards;
-                        -webkit-animation-iteration-count: 1;
-                        /* Safari 4.0 - 8.0 */
-                        animation-iteration-count: 1;
+                        width: 55%;
                         background: rgba(255,255,255,1);
                         background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(178,225,232,1) 27%, rgba(153,216,224,1) 54%, rgba(102,196,209,1) 76%, rgba(0,158,179,1) 100%);
                         background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(27%, rgba(178,225,232,1)), color-stop(54%, rgba(153,216,224,1)), color-stop(76%, rgba(102,196,209,1)), color-stop(100%, rgba(0,158,179,1)));
@@ -344,35 +306,7 @@
             }
         }
     }
-}
-
-@keyframes expert {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 90%;
-    }
-}
-@keyframes med {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 70%;
-    }
-}
-@keyframes novice {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 55%;
-    }
-}
+ }
 
 #myLogo {
     margin: auto;
@@ -410,36 +344,25 @@
     #stackContainer {
       section {
         width: 600px;
+
+        .medium {
+            &:hover, &.active  {
+                &::after {
+                  width: 80%;
+                }
+              }
+            }
+
+            .novice {
+                &:hover, &.active  {
+                    &::after {
+                      width: 70%;
+                    }
+                  }
+                }
+
       }
     }
-  }
-
-  @keyframes expert {
-      0% {
-          width: 0;
-      }
-
-      100% {
-          width: 90%;
-      }
-  }
-  @keyframes med {
-      0% {
-          width: 0;
-      }
-
-      100% {
-          width: 80%;
-      }
-  }
-  @keyframes novice {
-      0% {
-          width: 0;
-      }
-
-      100% {
-          width: 70%;
-      }
   }
 
 }
@@ -473,32 +396,28 @@
    }
  }
 
- @keyframes expert {
-     0% {
-         width: 0;
-     }
+ #stackLogo {
+   #stackContainer {
+     section {
 
-     100% {
-         width: 90%;
-     }
- }
- @keyframes med {
-     0% {
-         width: 0;
-     }
+       .medium {
+           &:hover, &.active  {
+               &::after {
+                 width: 65%;
+               }
+             }
+           }
 
-     100% {
-         width: 65%;
-     }
- }
- @keyframes novice {
-     0% {
-         width: 0;
-     }
+           .novice {
+               &:hover, &.active  {
+                   &::after {
+                     width: 50%;
+                   }
+                 }
+               }
 
-     100% {
-         width: 50%;
-     }
- }
+             }
+           }
+         }
 
 }
