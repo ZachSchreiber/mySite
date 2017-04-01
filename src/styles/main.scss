@@ -26,7 +26,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+
 
     section {
         width: 600px;
@@ -34,6 +34,7 @@ body {
         color: #626572;
         font-family: 'Lato', sans-serif;
         padding-top: 15px;
+        z-index: 99;
 
         ul {
             width: 100%;
@@ -224,6 +225,6 @@ body {
    }
 
    #projectsSection {
-     
+
    }
 }
