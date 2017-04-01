@@ -6,7 +6,7 @@
 
           "Zach Schreiber is a !Adjective !Noun. If you need a new !Noun, there is no need to !Verb any further. He takes !Noun !Verb-ing very seriously, so you are always number !Number on his list.",
 
-          "A testimonial: 'I needed to update my 1 , so I gave Zach Schreiber a 2 . He couln't have been 3 . '",
+          "A testimonial: 'I needed to update my !Noun , so I gave Zach Schreiber a !Noun . He couln't have been !Adjective! I highly !Verb him. And he doesn't charge a !Bodypart and a !Bodypart.",
 
           "Farts",
 
@@ -58,7 +58,7 @@ return {
   getForm: getForm,
   saveLocal: saveLocal,
   fetch: fetch,
-  
+
 };
 
 });
