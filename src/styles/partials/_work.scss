@@ -98,10 +98,10 @@
 @media only screen and (max-width: 1038px) {
 
 .projectMain {
-  img {
-    height: 70%;
-    width: 80%;
-  }
+  // img {
+  //   height: 70%;
+  //   width: 80%;
+  // }
   .projectText {
     width: 95%;
     padding: 20px 10px;
@@ -111,7 +111,9 @@
 
 @media only screen and (max-width: 750px) {
 
-  #projectsSection #subNav {
+  #projectsSection {
+   #subNav {
     width: 90%;
   }
+}
 }
