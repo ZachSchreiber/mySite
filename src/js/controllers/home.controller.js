@@ -2,9 +2,23 @@ var app =angular.module('zach-site');
 app.controller('homeCtrl', function($state, $scope) {
   var self = this;
 
+  //project view controller
+  this.viewNum = 0;
+  this.activeItem = 2;
+
+//scrolls pages back to top onload
   this.scrollTo = function() {
     $('body, html, #pageContainer').scrollTop(0);
-    
+    // if ($('#mainHead, section, ul li, #about').hasClass("active")) {
+    //   $scope.moveLi("0");
+    // } else if ($('#mainHead, section, ul li, #projects').hasClass("active")) {
+    //     $scope.moveLi("25");
+    // } else if ($('#mainHead, section, ul li, #play').hasClass("active")) {
+    //   $scope.moveLi("50");
+    // } else if ($('#mainHead, section, ul li, #contact').hasClass("active")) {
+    //   $scope.moveLi("75");
+    // }
+
   }
 
 //animates navbar border bottom. resets project views
@@ -12,11 +26,11 @@ $scope.moveLi = function(amount) {
   $('#moveMe').css('left', amount + '%')
   self.viewNum = 0;
   self.activeItem = 2;
+  self.slide = self.slides[self.viewNum];
+
 }
 
-//project view controller
-this.viewNum = 0;
-this.activeItem = 2;
+
 
 
 $scope.projectView = function(num1, num2) {
@@ -24,6 +38,7 @@ $scope.projectView = function(num1, num2) {
   self.activeItem = num2;
 }
 
+//Should be in a service....project array
 this.slides = [
        { title: 'Docdish', image: 'images/docdish.png', description: 'An app that uses multiple databases to access medical provider information. Users are allowed to edit some of the information, which is then compiled and submitted to a FHIR database.', stack: 'AngularJS + Sass + Ajax/jQuery', co: 'Robby Helms', links: 'https://github.com/rdhelms/rdhelms.github.io' , number: '1'},
        { title: 'Privacy Policy Generator', image: 'images/mpn.png', description: 'A submission to the "Privacy Policy Snapshot Challenge". Designed for health app developers. A form is filled out, JSON object is created, then our javascript and css libaries are imported. Their privacy disclosure is then rendered in our format.', stack: 'AngularJS + jQuery to render', co: 'Robby Helms', links:'https://github.com/rdhelms/rdhelms.github.io', number: '2'},

@@ -17,14 +17,14 @@ angular.module('zach-site').controller('spielCtrl', function($scope, $state,  sp
      }
  }
  this.detectmobile();
-
+  $scope.buttonText = "Show!";
   $scope.isActive = false;
       $scope.activeForm = function() {
       $scope.isActive = !$scope.isActive;
       if ($scope.isActive) {
-        $('#showBtn').text("Hide");
+        $scope.buttonText = "Hide!";
       } else {
-        $('#showBtn').text("Show!");
+        $scope.buttonText = "Show!";
       }
       };
 
