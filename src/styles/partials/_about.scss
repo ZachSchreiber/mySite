@@ -260,7 +260,7 @@
             }
 
             .expert {
-                &:hover {
+                &:hover, &.active  {
                     &::after {
                         animation-name: expert;
                         -webkit-animation-name: expert;
@@ -288,7 +288,7 @@
             }
 
             .medium {
-                &:hover {
+                &:hover, &.active  {
                     &::after {
                         animation-name: med;
                         -webkit-animation-name: med;
@@ -316,7 +316,7 @@
             }
 
             .novice {
-                &:hover {
+                &:hover, &.active {
                     &::after {
                         animation-name: novice;
                         -webkit-animation-name: novice;
