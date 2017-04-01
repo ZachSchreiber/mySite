@@ -81,5 +81,9 @@ $scope.labelClass = function(input) {
   }
 }
 
+$scope.donothing = function() {
+  
+}
+
 
 });
