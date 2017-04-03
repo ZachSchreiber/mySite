@@ -8,7 +8,6 @@
 
           "A testimonial: 'I needed to update my !Noun , so I gave Zach Schreiber a !Noun . He couln't have been !Adjective! I highly !Verb him. And he doesn't charge a !Bodypart and a !Bodypart.",
 
-          "Farts",
 
           ];
 

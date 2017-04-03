@@ -14,7 +14,7 @@
         line-height: 30px;
         position: relative;
         font-family: 'Lato', sans-serif;
-        color: #626572;
+        color: black;
 
         .myLinks {
            margin-top: 20px;
@@ -38,8 +38,8 @@
 
             .resume {
                 padding: 6px 20px;
-                border: 2px solid #626572;
-                color: #626572;
+                border: 2px solid black;
+                color: black;
                 vertical-align: center;
                 border-radius: 3px;
                 font-size: 20px;
@@ -107,7 +107,7 @@
     line-height: 30px;
     position: relative;
     font-family: 'Lato', sans-serif;
-    color: #626572;
+    color: black;
 
     h1 {
       font-size: 22px;
@@ -170,7 +170,7 @@
             -webkit-animation-iteration-count: 1;
             position: relative;
             font-family: 'Lato', sans-serif;
-            color: #626572;
+            color: black;
             box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12);
             position: relative;
 
@@ -313,6 +313,16 @@
     border-radius: 5px;
     width: 130px;
     height: 130px;
+}
+
+.stackInstructions {
+  height: inherit;
+  font-size: 1.4em;
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+
 }
 
 @media only screen and (max-width: 1038px) {

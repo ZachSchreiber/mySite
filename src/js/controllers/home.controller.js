@@ -6,20 +6,6 @@ app.controller('homeCtrl', function($state, $scope) {
   this.viewNum = 0;
   this.activeItem = 2;
 
-//scrolls pages back to top onload
-  this.scrollTo = function() {
-    $('body, html, #pageContainer').scrollTop(0);
-    // if ($('#mainHead, section, ul li, #about').hasClass("active")) {
-    //   $scope.moveLi("0");
-    // } else if ($('#mainHead, section, ul li, #projects').hasClass("active")) {
-    //     $scope.moveLi("25");
-    // } else if ($('#mainHead, section, ul li, #play').hasClass("active")) {
-    //   $scope.moveLi("50");
-    // } else if ($('#mainHead, section, ul li, #contact').hasClass("active")) {
-    //   $scope.moveLi("75");
-    // }
-
-  }
 
 //animates navbar border bottom. resets project views
 $scope.moveLi = function(amount) {
@@ -72,7 +58,7 @@ $scope.updateView = function(integer) {
 //Links to open in new tab
 this.openTab = function() {
     this.github = 'https://github.com/ZachSchreiber';
-    this.resume = 'www.google.com';
+    this.resume = 'https://www.visualcv.com/zachary-schreiber-';
     this.Leigh =  'https://github.com/leighebryant';
     this.Robby =   'https://github.com/rdhelms/rdhelms.github.io';
 }
@@ -105,6 +91,12 @@ $scope.labelClass = function(input) {
 $scope.donothing = function() {
 
 }
+
+//scrolls pages back to top onload
+  this.scrollTo = function() {
+    $('body, html, #pageContainer').scrollTop(0);
+
+  }
 
 
 });
