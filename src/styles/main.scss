@@ -58,11 +58,10 @@ a:visited {
                 text-align: center;
                 width: 25%;
                 padding-bottom: 12px;
-                cursor: pointer;
                 transition: 0.4s ease;
 
                 &:hover {
-                  color: #009eb3;
+                  cursor: pointer;
                 }
 
                 &.active {
