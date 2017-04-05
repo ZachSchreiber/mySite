@@ -13,6 +13,9 @@ $scope.moveLi = function(amount) {
   self.viewNum = 0;
   self.activeItem = 2;
   self.slide = self.slides[self.viewNum];
+  if ($('.play').hasClass('active')) {
+    console.log("play");
+  }
 
 }
 
@@ -74,18 +77,7 @@ $('.pageContainer').on('click', '.localSpiel', function() {
    alert(idName);
 });
 
-//input "placeholder animations"
-  $scope.emailActive = false;
-  $scope.bodyActive = false;
-$scope.labelClass = function(input) {
-  if (input === 'email') {
-    $scope.emailActive = true;
-   $('#email-container > input').focus();
-  } if (input === 'body') {
-      $scope.bodyActive = true;
-      $('#body-container > textarea').focus();
-  }
-}
+
 
 //hack to make animation work on mobile
 $scope.donothing = function() {

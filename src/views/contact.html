@@ -1,16 +1,18 @@
 <section ng-init="home.scrollTo()" id="contactSection">
   <div id="contactContainer">
     <h1>Contact Me</h1>
-    <form method="POST" action="https://formspree.io/zachgives@gmail.com">
+    <form method="POST" name="contactForm" action="https://formspree.io/zachgives@gmail.com">
 <div id="email-container">
 <label for="email" ng-click="labelClass('email')"  ng-class="{'active': emailActive == true}" id="email-label">Your email</label>
-<input type="email" ng-click="labelClass('email')"  name="email" placeholder="">
+<input type="email" ng-click="labelClass('email')" ng-required="true"  name="email" placeholder="">
+<input type="hidden" name="_subject" value="Your Portfolio Site Contact" />
 </div>
 <div id="body-Container">
 <label for="message" ng-click="labelClass('body')"  ng-class="{'active': bodyActive == true}" id="body-label">Your message</label>
-<textarea name="message" placeholder="" ng-click="labelClass('body')" ></textarea>
+<textarea name="message" ng-minlength="2"  ng-required="true" placeholder="" ng-click="labelClass('body')" ></textarea>
+<input type="text" name="_gotcha" style="display:none" />
 </div>
-<button  type="submit">Send</button>
+<button ng-disabled="!contactForm.$valid"  type="submit">Send</button>
 </form>
   </div>
 </section>
