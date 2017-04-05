@@ -209,19 +209,6 @@ a:visited {
     }
 }
 
-@media only screen and (max-width: 800px) {
-  #mainHead {
-    section {
-      ul {
-        li {
-          &:hover {
-            color: black;
-          }
-        }
-      }
-    }
-  }
-}
 
 @media only screen and (max-width: 680px) {
 #playSection {
