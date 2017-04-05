@@ -109,7 +109,7 @@ $scope.donothing = function() {
      || navigator.userAgent.match(/Windows Phone/i)
      ){
 
-         $('#mainHead, section, ul, li').removeClass('hover');
+         $('#mainHead, section, ul, li').off( "mouseenter mouseleave" );
 
      }
  }
