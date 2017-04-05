@@ -9,7 +9,7 @@ app.controller('homeCtrl', function($state, $scope) {
 
 //animates navbar border bottom. resets project views
 $scope.moveLi = function(amount) {
-  $('#moveMe').css('left', amount + '%');
+  //$('#moveMe').css('left', amount + '%');
   self.viewNum = 0;
   self.activeItem = 2;
   self.slide = self.slides[self.viewNum];
@@ -97,6 +97,25 @@ $scope.donothing = function() {
     $('body, html, #pageContainer').scrollTop(0);
 
   }
+
+  this.detectmobile = function() {
+
+     if( navigator.userAgent.match(/Android/i)
+     || navigator.userAgent.match(/webOS/i)
+     || navigator.userAgent.match(/iPhone/i)
+     || navigator.userAgent.match(/iPad/i)
+     || navigator.userAgent.match(/iPod/i)
+     || navigator.userAgent.match(/BlackBerry/i)
+     || navigator.userAgent.match(/Windows Phone/i)
+     ){
+
+         $('.videoMobile').remove();
+         $('#mainHead, section, ul, li').off('hover');
+         $('#projectsSection, #subNav, li').off('hover');
+
+     }
+ }
+ this.detectmobile();
 
 
 });
