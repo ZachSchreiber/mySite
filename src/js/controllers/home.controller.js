@@ -98,7 +98,7 @@ $scope.donothing = function() {
 
   }
 
-  this.detectmobile = function() {
+  this.detectMobileMain = function() {
 
      if( navigator.userAgent.match(/Android/i)
      || navigator.userAgent.match(/webOS/i)
@@ -109,13 +109,12 @@ $scope.donothing = function() {
      || navigator.userAgent.match(/Windows Phone/i)
      ){
 
-         $('.videoMobile').remove();
-         $('#mainHead, section, ul, li').off('hover');
-         $('#projectsSection, #subNav, li').off('hover');
+         $('#mainHead, section, ul, li').removeClass('hover');
 
      }
  }
- this.detectmobile();
+ this.detectMobileMain();
+
 
 
 });

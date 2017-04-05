@@ -1,6 +1,24 @@
 angular.module('zach-site').controller('spielCtrl', function($scope, $state,  spielService,  $sce) {
   var self = this;
 
+  this.detectmobile = function() {
+
+     if( navigator.userAgent.match(/Android/i)
+     || navigator.userAgent.match(/webOS/i)
+     || navigator.userAgent.match(/iPhone/i)
+     || navigator.userAgent.match(/iPad/i)
+     || navigator.userAgent.match(/iPod/i)
+     || navigator.userAgent.match(/BlackBerry/i)
+     || navigator.userAgent.match(/Windows Phone/i)
+     ){
+
+         $('.videoMobile').remove();
+
+     }
+ }
+ this.detectmobile();
+
+
 
   $scope.buttonText = "Show!";
   $scope.isActive = false;
