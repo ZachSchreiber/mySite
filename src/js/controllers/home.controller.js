@@ -9,17 +9,25 @@ app.controller('homeCtrl', function($state, $scope) {
 
 //animates navbar border bottom. resets project views
 $scope.moveLi = function(amount) {
-  $('#moveMe').css('left', amount + '%')
+  $('#moveMe').css('left', amount + '%');
   self.viewNum = 0;
   self.activeItem = 2;
   self.slide = self.slides[self.viewNum];
-  if ($('.play').hasClass('active')) {
-    console.log("play");
-  }
 
 }
-
-
+//I know there's a better way to write this. On location change, checks href, animates the underline accordingly
+$scope.$on('$locationChangeSuccess', function(next, current) {
+   $scope.URL = window.location.href;
+   if ($scope.URL.includes("/about")) {
+    $('#moveMe').css('left', '0%');
+  } else if ($scope.URL.includes("/projects")) {
+    $('#moveMe').css('left', '25%');
+  } else if ($scope.URL.includes("/play")) {
+    $('#moveMe').css('left', '50%');
+  } else {
+    $('#moveMe').css('left', '75%');
+  }
+ });
 
 
 $scope.projectView = function(num1, num2) {
