@@ -51,7 +51,7 @@ a:visited {
             flex-wrap: nowrap;
             margin-bottom: 10px;
             position: relative;
-            
+
 
 
             li {
@@ -207,6 +207,20 @@ a:visited {
     #pageContainer {
       width: 95%;
     }
+}
+
+@media only screen and (max-width: 800px) {
+  #mainHead {
+    section {
+      ul {
+        li {
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 680px) {
