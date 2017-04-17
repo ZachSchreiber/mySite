@@ -16,11 +16,12 @@
             </ul>
         </header>
         <main class="projectMain">
-    <h2>{{home.slide.title}}</h2><img src="{{home.slide.image}}">
+    <h2>{{home.slide.title}}</h2>
+    <a class="img-link" target="_blank" ng-href="{{home.slide.links[1]}}"><img src="{{home.slide.image}}"></a>
     <div class=projectText>
         <p>{{home.slide.description}}</p>
       <p><i class="stackBold">Stack:</i> &nbsp{{home.slide.stack}}</p>
-        <p><i class="stackBold">Co-contributor:</i> &nbsp <a class="" target="_blank" ng-href="{{home.slide.links}}" ng-mousedown="home.openTab()"><i class="fa fa-github" aria-hidden="true"></i>{{home.slide.co}}</a></p>
+        <p><i class="stackBold">Co-contributor:</i> &nbsp <a class="" target="_blank" ng-href="{{home.slide.links[0]}}"><i class="fa fa-github" aria-hidden="true"></i>{{home.slide.co}}</a></p>
     </div>
 </main>
     </section>
